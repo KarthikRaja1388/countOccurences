@@ -24,5 +24,10 @@ function countOccurences(para) {
 }
 
 btnCount.addEventListener("click", () => {
-  countOccurences(paragraphElement.value);
+  if (paragraphElement.value !== "") {
+    display.textContent = "";
+    countOccurences(paragraphElement.value);
+  } else {
+    display.textContent = "Please enter a string";
+  }
 });
